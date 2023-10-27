@@ -1,12 +1,12 @@
 package com.newtechieblog.wordpress.views.informationbook.models;
 
 public class ModelClass {
-    private String imageName;
-    private String categoryName;
+    private final String imageName;
+    private final String categoryName;
 
-    public ModelClass(String imageName, String categoryName) {
-        this.imageName = imageName;
-        this.categoryName = categoryName;
+    public ModelClass(int imageName, int categoryName) {
+        this.imageName = String.valueOf(imageName);
+        this.categoryName = String.valueOf(categoryName);
     }
 
     public String getImageName() {

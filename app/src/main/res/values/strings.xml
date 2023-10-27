@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Information Book</string>
 
-    <string name="wonders">Seven Wonder of the World</string>
+    <string name="countries">Countries</string>
+    <string name="leaders">Leaders</string>
+    <string name="museums">Museums</string>
+    <string name="wonders">Wonders</string>
+
+    <string name="wonders_category">Seven Wonder of the World</string>
+    <string name="countries_category">The Countries</string>
+    <string name="leaders_category">The Leaders</string>
+    <string name="museums_category">The Museums</string>
+
 </resources>
