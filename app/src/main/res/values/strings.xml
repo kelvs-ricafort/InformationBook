@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Information Book</string>
+
+    <string name="wonders">Seven Wonder of the World</string>
 </resources>
