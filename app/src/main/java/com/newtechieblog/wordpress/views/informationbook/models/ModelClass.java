@@ -4,9 +4,9 @@ public class ModelClass {
     private final String imageName;
     private final String categoryName;
 
-    public ModelClass(int imageName, int categoryName) {
-        this.imageName = String.valueOf(imageName);
-        this.categoryName = String.valueOf(categoryName);
+    public ModelClass(String imageName, String categoryName) {
+        this.imageName = imageName;
+        this.categoryName = categoryName;
     }
 
     public String getImageName() {

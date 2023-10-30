@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.newtechieblog.wordpress.views.informationbook.R;
+import com.newtechieblog.wordpress.views.informationbook.adapters.AdapterClass;
 import com.newtechieblog.wordpress.views.informationbook.models.ModelClass;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> arrayList;
+    private AdapterClass adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
-        ModelClass countries = new ModelClass(R.string.countries, R.string.countries_category);
-        ModelClass leaders = new ModelClass(R.string.leaders, R.string.leaders_category);
-        ModelClass museums = new ModelClass(R.string.museums, R.string.museums_category);
-        ModelClass wonders = new ModelClass(R.string.wonders, R.string.wonders_category);
+        ModelClass countries = new ModelClass("countries", "The Countries");
+        ModelClass leaders = new ModelClass("leaders","The Leaders");
+        ModelClass museums = new ModelClass("museums", "The Museums");
+        ModelClass wonders = new ModelClass("wonders", "Seven wonders of the World");
 
         arrayList.add(countries);
         arrayList.add(leaders);
         arrayList.add(museums);
         arrayList.add(wonders);
 
-
-
+        adapter = new AdapterClass(arrayList, this);
+        recyclerView.setAdapter(adapter);
 
     }
 }
