@@ -13,28 +13,34 @@ import com.newtechieblog.wordpress.views.informationbook.adapters.ViewPagerAdapt
 
 public class CountriesActivity extends AppCompatActivity {
 
-    private TabLayout tabLayoutUnitedKingdom;
-    private ViewPager2 viewPagerUnitedKingdom;
+    private TabLayout tabLayoutCountries;
+    private ViewPager2 viewPagerCountries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countries);
 
-        tabLayoutUnitedKingdom = findViewById(R.id.tabLayoutUnitedKingdom);
-        viewPagerUnitedKingdom = findViewById(R.id.viewPagerUnitedKingdom);
+        tabLayoutCountries = findViewById(R.id.tabLayoutCountries);
+        viewPagerCountries = findViewById(R.id.viewPagerCountries);
 
         ViewPagerAdapterCountries adapter = new ViewPagerAdapterCountries(getSupportFragmentManager(), getLifecycle());
 
-        viewPagerUnitedKingdom.setAdapter(adapter);
+        viewPagerCountries.setAdapter(adapter);
 
-        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayoutUnitedKingdom, viewPagerUnitedKingdom,
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayoutCountries, viewPagerCountries,
                 true, true, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position) {
                     case 0:
                         tab.setText("United Kingdom");
+                        break;
+                    case 1:
+                        tab.setText("France");
+                        break;
+                    case 2:
+                        tab.setText("Italy");
                         break;
                 }
             }

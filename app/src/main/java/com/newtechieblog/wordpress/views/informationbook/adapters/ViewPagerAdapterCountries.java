@@ -5,6 +5,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.newtechieblog.wordpress.views.informationbook.fragments.FragmentFrance;
+import com.newtechieblog.wordpress.views.informationbook.fragments.FragmentItaly;
 import com.newtechieblog.wordpress.views.informationbook.fragments.FragmentUnitedKingdom;
 
 public class ViewPagerAdapterCountries extends FragmentStateAdapter {
@@ -20,6 +22,12 @@ public class ViewPagerAdapterCountries extends FragmentStateAdapter {
             case 0:
                 fragment = FragmentUnitedKingdom.newInstance();
                 break;
+            case 1:
+                fragment = FragmentFrance.newInstance();
+                break;
+            case 2:
+                fragment = FragmentItaly.newInstance();
+                break;
             default:
                 return null;
         }
@@ -29,7 +37,7 @@ public class ViewPagerAdapterCountries extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 3;
     }
 
 
