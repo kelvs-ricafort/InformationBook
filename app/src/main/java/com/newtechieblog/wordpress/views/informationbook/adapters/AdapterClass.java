@@ -1,5 +1,6 @@
 package com.newtechieblog.wordpress.views.informationbook.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -38,7 +39,7 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.CardViewHold
     }
 
     @Override
-    public void onBindViewHolder(CardViewHolder holder, final int position) {
+    public void onBindViewHolder(CardViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         ModelClass model = modelList.get(position);
         holder.textViewSplash.setText(model.getCategoryName());
         holder.imageViewSplash.setImageResource(context.getResources()
